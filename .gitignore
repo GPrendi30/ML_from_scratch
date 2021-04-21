@@ -1,0 +1,11 @@
+#python compiled
+*.pyc
+__pycache__/
+
+#Editor files
+.vscode/
+.spyproject
+
+#Python virtual env
+.venv/
+
