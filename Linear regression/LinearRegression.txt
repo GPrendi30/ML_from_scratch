@@ -1,0 +1,34 @@
+# Linear Regression
+In linear Regression we want to calculate continous values,
+ while in classification we select a value
+
+# Approximate data, with a linear function
+
+y = w * x + b 
+w -> weight
+b -> bias 
+
+# Cost function
+Mean Square Error
+
+MSE = J(w,b) = 1/N * sum( (y - (wx - b)) ^ 2 )
+y = is the actual value from the training samples
+w*x - b is the predicition
+
+# To minimize the error:
+We use the derivative of the all the cost functions = gradient
+    -> with respect to w [1/N * sum(- 2x (y - (wx + b)))]
+    -> with respect to b [1/N * sum( -2 (y - (wx + b)))]
+
+# Gradient descent
+Iterative method to get to the minimum.
+We initialize the weights, and we go to the lowest side of the gradient
+
+# Update Rules
+a = learning rate
+w = w - a * dw (derivative of w) 
+b = b - a * db (derivative of  b)
+
+# Learning rate defines the movement with each iteration.
+ dJ / dw => dw = 1/N * sum(2x * (y^ - y1)) #y^ is the predicition, y1 is the label
+ dJ / db => db = 1/N * sum(2 * (y^ - y1))  
