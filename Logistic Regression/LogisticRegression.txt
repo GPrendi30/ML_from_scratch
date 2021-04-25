@@ -1,0 +1,31 @@
+Logistic regression
+
+We have the aproximation:
+f(w,b) = w * x + b 
+
+Using the Logistic regression we need a probability.
+Apply the sigmoid function
+
+y = hg(x) = 1 / 1 + e ^ -(w*x + b)
+
+Sigmoid function
+outputs a value, between 0 and 1
+
+s(x) = 1 / 1 + e ^ -x
+
+# Use gradient Descent
+
+# Cost function
+Cross_Entropy = 1 / N sum(y ^ i * log(h(x ^ i) + (1 - y^i) * log(1 - h(x ^ i))))
+
+To optimize the cost function 
+we use the gradient Descent, 
+calculate derivates, then go to the lower level.
+
+# update the rules
+
+w = w - a * dw
+b = b - a * db 
+
+dw = 1/N sum(2x(y - y1))
+db = 1/N sum(2(y - y1))
