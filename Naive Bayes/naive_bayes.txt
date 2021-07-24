@@ -1,0 +1,35 @@
+Naive Bayes
+Classification
+Based on propability
+
+P(A|B) = ( P(B|A) * P(A) ) / P(B) -> propability of A given that B has happened
+
+
+In the machine learning model
+    P(y|X) = ( P(X|y) * P(y) ) / P(X)
+
+    X -> feature vector
+    X = {x1, x2, x3, x4, x5, x6}
+
+We assume that all the features are mutually independent
+    but they contribute to the result
+
+P(y|X) = ( P(x1|y) * P(x2|y) * ... * P(xn|y)  * P(y) ) P(X)
+
+P(y|X)  => Posterior propability
+P(x1|y) => Class conditional propability
+P(y)    => prior propability of y
+P(X)    => prior propability of x
+
+Select class with highest propability
+
+y = argmaxy P(x1|y) * P(x2|y) * ... * P(xn|y) * P(y) => might produce an overflow
+
+y = argmaxy log(P(x1|y)) + log(P(x2|y)) + log(P(x3|y)) ... + log(P(xn|y)) + log(P(y))
+
+
+# Prior Popability = frequency
+
+# class conditional propability P(xi|y)
+
+P(xi|y) = ( 1 / sqrt(2 * pi * sigma^2y) ) * exp( - ( (x - meany) ^ 2 / 2 sigmay ^2) )
