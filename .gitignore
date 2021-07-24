@@ -7,5 +7,6 @@ __pycache__/
 .spyproject
 
 #Python virtual env
+.env/
 .venv/
 
